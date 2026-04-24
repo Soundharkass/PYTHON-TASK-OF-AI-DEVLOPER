@@ -1,0 +1,510 @@
+#1.Write a program to print the first N natural numbers. Input : 10 , Output : 1 2 3 4 5 6 
+7 8 9 10 
+'''
+n=int(input("Enter the number"))
+for i in range(1, n+1):
+    print(i, end=" ")
+
+i=1
+n=int(input("Enter the Number: "))
+while i<=n:
+    print(i,end=" ")
+    i+=1
+'''
+#2.Write a program to print the first N even natural numbers. Input : 5 , Output 2 4 6 8 10 
+'''
+n=int(input("Enter the Number:"))
+for i in range(1,n+1):
+    print(i*2, end=" ")
+
+
+i=1
+n=int(input("Enter the Number:"))
+while i<=n:
+    print(i*2, end=" ")
+    i+=1
+'''
+#3.Write a program to print the first N odd natural numbers. Input : 5 , Output : 1 3 5 7 9 
+'''
+n=int(input("Enter the Number in for loop:"))
+for i in range(1,n+1):
+    print(i*2-1, end=" ")
+
+print("\n")
+
+i=1
+n=int(input("Enter the Number in (while loop):"))
+while i<=n:
+    print(i*2-1, end=" ")
+    i+=1
+'''
+#4.Write a program to print first N multiples of 3. Input : 7 , Output : 3 6 9 12 15 18 21 
+'''
+n=int(input("Enter the Number:"))
+for i in range(1,n+1):
+    print(i*3, end=" ")
+print("\n")
+i=1
+n=int(input("Enter the Number:"))
+while i<=n:
+    print(i*3, end=" ")
+    i+=1
+'''
+
+#5.Write a program to print first N multiples of 5. Input : 5 , Output : 5 10 15 20 25
+'''
+n=int(input("Enter the Number:"))
+for i in range(1,n+1):
+    print(i*5, end=" ")
+print("\n")
+i=1
+n=int(input("Enter the Number:"))
+while i<=n:
+    print(i*5, end=" ")
+    i+=1
+'''
+
+#6.Write a program to print all the multiples of 2 till N. Input : 15 , Output : 2 4 6 8 10 12 14 
+'''
+n=int(input("Enter the Number:"))
+for i in range(1,n+1):
+    if i%2==0:
+        print(i)
+print("\n")
+i=1
+n=int(input("Enter the Number:"))
+while i<=n:
+    if i%2==0:
+        print(i)
+    i+=1
+'''
+#7.Write a program to print all the numbers which are multiples of either 2 or 3 till N. Input : 15 , Output : 2 3 4 6 8 9 10 12 14 15 
+'''
+n=int(input("Enter the Number:"))
+for i in range(1,n+1):
+    if i%2==0 or i%3==0:
+        print(i)
+print("\n")        
+i=1
+n=int(input("Enter the Number:"))
+while i<=n:
+    if i%2==0 or i%3==0:
+        print(i)
+    i+=1
+'''
+#8.Write a program to print all the numbers which are multiples of either 2, 5 or 7 till N. 
+#Input : 15 , Output : 2 4 5 6 7 8 10 12 14 15 
+'''
+n=int(input("Enter the Number:"))
+for i in range(1,n+1):
+    if i%2==0 or i%5==0 or i%7==0:
+        print(i)
+i=1
+n=int(input("Enter the number: "))
+while i<=n:
+    if i%2==0 or i%5==0 or i%7==0:
+        print(i)
+    i+=1
+'''
+#9.Write a program to print the first N multiples of either 3, 5 or 7.Input : 10 , Output : 3 
+#5 6 7 9 10 12 14 15 18 
+'''
+n=int(input("Enter the Number:"))
+for i in range(1,n+1):
+    if i%3==0 or i%5==0 or i%7==0:
+        print(i)
+i=1
+n=int(input("Enter the number: "))
+while i<=n:
+    if i%3==0 or i%5==0 or i%7==0:
+        print(i)
+    i+=1 
+'''
+#10.Find the sum of all digits in a positive integer. Input : 123456789 , Output : 45
+'''
+
+num=int(input("Enter the number;"))
+s=0
+for i in str(num):
+    s+=int(i)
+print("Sum of given num for loop:",s)
+
+print()
+
+num=int(input("Enter the Number:"))
+s=0
+while num>0:
+    s+= num % 10
+   # print(" num of %:",num)
+    num //= 10
+   # print("num of floor DIV:",num)
+    print("sum of given numbers:",s)
+'''
+#11. Count the number of digits in a positive integer. Input : 123456789 , Output : 9 
+'''
+num=int(input("enter the Number;"))
+count = 0
+
+while num > 0:
+    count += 1
+    num //= 10
+print("COUNT OF :",count)
+print("\n")
+num=int(input("Enter the number;"))
+count=0
+for i in str(num):
+    count+=1
+print("COUNT OF :",count)   
+'''
+#12. Write a program to find factors of a given number. Input : 20 , Output : 1 2 4 5 10 20  
+'''
+num=int(input("Enter the Numbmer:"))
+
+print("Factors of",num,"using for loop:")
+for i in range(1,num+1):
+    if num%i==0:
+        print(i,end=" ")
+
+print()
+num=int(input("Enter the Numbmer:"))
+i=1
+print("Factors of", num, "using while loop:")
+while i<=num:
+    if num%1==0:
+        print(i,end=" ")
+    i += 1
+'''
+
+#13. Write a program to count factors of a given number. Input : 20 , Output : 6
+num=int(input("Enter the number;"))
+count=0
+for i in range(1,num+1):
+    if num%i==0:
+        count+=1
+print("number of factors(For LOOP):",count)
+
+print()
+
+num=int(input("Enter the Number:"))
+i=1
+count=0
+
+while i<=num:
+    if num%i==0:
+        count+=1
+    i+=1
+print("number of factors(While LOOP):",count)   
+'''
+#14. Write a program to find whether the given number is a prime number or not.I nput : 
+#11 , Output : Yes 
+
+num=int(input("Enter the number;"))
+c=0
+for i in range(1,num+1):
+    if num%i==0:
+        c+=1
+if c==2:
+    print("prime number")
+else:
+    print("not prime number")
+        
+'''
+#15.Print all prime numbers from 2 up to and including 'n'. Input : 15 , Output : 2 3 5 7 11 13 
+'''
+num=int(input("Enter the number;"))
+
+for i in range(2,num+1):
+    c=0
+    for j in range(1,i+1):
+        if i%j==0:
+            c+=1
+    if c==2:
+        print("yes prime number",i)
+'''   
+#16. Write a program to find the greatest common factor of given 2 integers. Input : 10 20 ,Output : 10 
+'''
+a=int(input("Enter the number;"))
+b=int(input("Enter the number:")) 
+gcf=1
+for i in range(1,min(a,b)+1):
+     if a%i==0 and b%i==0:
+         gcf=i
+print("GCF of", a, "and", b, "is:", gcf)      
+'''
+#17.Print the common factors of two positive integers n and m. Input : 8 12 , Output : 1 2 4 
+'''
+a=int(input("Enter the number;"))
+b=int(input("Enter the number:")) 
+
+for i in range(1,min(a,b)+1):
+     if a%i==0 and b%i==0:
+         print(i,end="")
+'''
+#18. Write a program to get the Fibonacci series between 0 to 50. 
+'''
+a=int(input("Enter the number:"))
+n1=0
+n2=1
+for i in range(1,a+1):
+    print(n1)
+    n3=n1+n2
+    n1=n2
+    n2=n3
+'''
+#19. Write a program to find the factorial of a given number. 
+'''
+n=int(input("Enter the number:"))
+fact=1
+for i in range(1,n+1):
+    fact*=i
+print("Factorial of", n, "is:", fact)
+
+print()
+
+n=int(input("enter the Number:"))
+
+while i<n:
+    fact*=i
+print("Factorial of", n, "is:", fact) 
+'''
+#20.Write a program that reads a set of integers, and then prints the sum of the even and odd integers.
+'''
+num=int(input("Enter the number;"))
+e=0
+o=0
+for i in range(num):
+    if i%2==0:
+        e+=i  
+    else:
+        o+=i
+print("Sum of given odd num :",o)
+print("Sum of given even num :",e)
+'''
+#21. Write a program to check whether the given number is palindrome or not. 
+##Palindrome is a number when reversed it gives the same number. Example 1: If the 
+##number is 121 Reverse is 121 Hence, 121 is a Palindrome Example 2: If the number is 
+##438 Reverse is 834 Hence, 438 is not a Palindrome 
+'''
+num=int(input("Enter the number:"))
+s=0
+a=num
+t=a
+while a>0:
+    r=a%10
+    s=(s*10)+r
+    a//=10
+if s==t:
+    print("YES")
+else:
+    print("NO")
+
+'''
+#22. Write a program to print if a number is an Armstrong number or not. 153 is an 
+##Armstrong number. 13+53+33 = 153
+'''
+a=int(input("Enter the Number:"))
+c=0
+temp=a
+while a>0:
+    a//=10
+    c+=1
+a=temp
+arm=0
+while a>0:
+    r=a%10
+    arm+=r**c
+    print(arm)
+    a//=10
+if temp==arm:
+    print("YES ,is arm number:")
+else:
+    print("NO, is not arm number:")
+'''
+#23 patterns
+#23(1)
+'''
+for i in range(1,6):
+    for j in range(1,6):
+        if i==1 or i==5 or j==1 or j==5:
+            print("*",end=" ")
+        else:
+            print(" ",end=" ")
+    print()
+'''
+#23(2)
+'''
+for i in range(1,6):
+    for j in range(1,6):
+            print("*",end=" ")
+    print()
+'''
+#23(3)
+'''
+for i in range(1,6):
+    for j in range(1,i+1):
+        print("*",end=" ")
+    print()    
+'''
+#23(4)
+'''
+n=5
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print("*",end=" ")
+    print()
+'''
+#23(5)
+'''
+n=5
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(j,end=" ")
+    print()
+'''
+#23(6)
+'''
+n=5
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(i,end=" ")
+    print()
+'''
+#23(7)
+'''
+n=6
+for i in range(1,n+1):
+    for j in range(1,n-i+1):
+        print("*",end=" ")
+    print()
+'''
+#23(8)
+'''
+n=5
+for i in range(1,n+1):
+    for j in range(1,n-i+1):
+        print(" ",end=" ")
+    for k in range(1,i+1):
+        print("*",end=" ")
+    print()
+'''
+#23(9)
+'''
+n=6
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(" ",end=" ")
+    for k in range(1,n-i+1):
+        print("*",end=" ")
+    print()
+'''
+#23(10)
+'''
+for i in range(1,6):
+    for j in range(1,6-i+1):
+        print("*",end=" ")
+    print()
+for i in range(1,6):
+    for j in range(1,i+1):
+        print("*", end=" ")
+    print()
+'''
+#23(11)
+'''
+for i in range(1,6):
+    for j in range(1,6-i+1):
+        print(" ",end=" ")
+    for k in range(1,6):
+        print("*",end=" ")
+    print()
+'''
+#23(12)
+'''
+n=5
+for i in range(1,n+1):
+    for j in range(1,n-i+1):
+        print(" ",end=" ")
+    for k in range(0,2*i-1):
+        print("*",end=" ")
+    print()
+for i in range(n-1,0,-1):
+    for j in range(0,n-i):
+        print(" ",end=" ")
+    for k in range(0,2*i-1):
+        print("*",end=" ")
+    print()
+'''
+#23(13)butterfly
+'''
+n=5
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print("*",end=" ")
+    p=n-i+1
+    for k in range(0,2*p):
+        print(" ",end=" ")
+    for l in range(1,i+1):
+        print("*",end=" ")
+    print()
+for i in range(1,n-1):
+    for j in range(0,2*n+2):
+        print("*",end=" ")
+    print()
+for i in range(n,0,-1):
+    for j in range(1,i+1):
+        print("*",end=" ")
+    p=n-i+1
+    for k in range(1,2*p+1):
+        print(" ",end=" ")
+    for l in range(1,i+1):
+        print("*",end=" ")
+    print()
+        
+'''
+#23(14)
+'''
+n=5
+for i in range(1,n+1):
+    for j in range(1,n-i+1):
+        print(" ",end=" ")
+    for k in range(0,2*i-1):
+        print("*",end=" ")
+    print()
+'''
+#23(15)Diamond shape
+'''
+n=5
+for i in range(1,n+1):
+    for j in range(1,n-i+1):
+        print(" ",end=" ")
+    for k in range(1,2*i):
+        print("*",end=" ")
+    print()
+
+for i in range(n-1,0,-1):
+    for j in range(1,n-i+1):
+        print(" ",end=" ")
+    for k in range(1,2*i):
+        print("*",end=" ")
+    print()
+'''
+#23(16)
+'''
+n=6
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(" ",end=" ")
+    for k in range(1,n-i+1):
+        print(j,end=" ")
+    print()
+
+n=6
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(" ",end=" ")
+    for k in range(1,n-i+1):
+        print(i,end=" ")
+    print()
+'''
+
+
+

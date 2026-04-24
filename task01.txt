@@ -1,0 +1,103 @@
+#Write a Program to Print Hello world!
+'''
+print("hello")
+'''
+#Write a Program to Add,Sub,Multiply,Divide,Modules of Two Numbers
+'''
+a=20
+b=60
+c=(a+b)
+d=(a-b)
+e=(a*b)
+f=(a/b)
+g=(a%b)
+print(a,b,c,b,e,f,g)
+'''
+#Write a Program to Find the Square Root [formula = number **0.5]
+'''
+num=28
+result=num**0.5
+print(result)
+'''
+#Write a Program to Calculate the Area of a Triangle [formula = 0.5 x base x height]
+'''
+base=20
+height=25
+triangle=(0.5*base*height)
+print(triangle)
+'''
+#Write a Program to Solve Quadratic Equation [ (a+b)2 formula ,
+#(a-b)2 formula ,a2-b2  formula ]
+'''
+a=2
+b=3
+formula1=(a+b)**2
+formula2=(a-b)**2
+formula3=(a**2)
+formula4=(b**2)
+print(a,b)
+print(formula1)
+print(formula2)
+print(formula3)
+print(formula4)
+'''
+#Write a Program to Swap Two Variables  [using third variable ,
+#without using third variable]
+'''
+a = 10
+b = 20
+print(a,b)
+print("Before swapping:a=",a,"b=",b)
+temp=a
+a=b
+b=temp
+print("After swapping(using thrid variable):a=",a,"b=",b)
+
+a = 10
+b = 20
+print("before swapping:a=",a,"b=",b)
+a,b=b,a
+print("After swapping(wihtout thrid variable):a=",a,"b=",b)
+'''
+#Write a Program to Convert Kilometers to Miles [ 1km = 0.63 miles ]
+'''
+a=10
+miles=(a*0.63)
+print(miles)
+'''
+#Write a Program to Convert Celsius To Fahrenheit [ formula = (Celsius x 1.8) + 32]
+
+'''
+a=25
+fahrenheit=(a*1.8)+32
+print(fahrenheit)
+'''
+#Write a program to find last digit of the number
+'''
+a=45
+last=a%10
+print(last)
+'''
+#Write a program to find last two digit of the number
+'''
+a=254
+last=a%100
+print(last)
+'''
+
+
+#Write a program to take a five-digit number as input, square the middle digit and print number and the square.
+#Input Data:
+#Input an integer: 54623
+#Expected Output
+#Square of 6 is: 36
+'''
+num=54623
+num//=100
+print(num)
+c=num%10
+print(c**2)
+'''
+
+
+
