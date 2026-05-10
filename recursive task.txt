@@ -1,0 +1,309 @@
+#1.Recursive function to find sum of n numbers.
+
+'''
+def sum_n(n):
+    if n == 0:  
+        return 0
+    else:        
+        return n + sum_n(n - 1)
+
+num = int(input("Enter a number: "))
+result = sum_n(num)
+
+print("Sum of first", num, "numbers =", result)
+'''
+#2.Recursive function to find factorial.
+'''
+def fact(n):
+    if n==0:
+        return 1
+    else:
+        return n*fact(n-1)
+
+print(fact(5))
+'''
+#3.Recursive function to print numbers from 1 to n.
+'''
+def print_nums(n):
+    if n == 0: 
+        return
+    else:
+        print_nums(n - 1)   
+        print(n, end=" ")  
+
+num = int(input("Enter a number: "))
+print("Numbers from 1 to", num, ":")
+print_nums(num)
+'''
+#4.Recursive function to print numbers from n to 1.
+'''
+def print_nums_reverse(n):
+    if n == 0:   
+        return
+    else:
+        print(n, end=" ")        
+        print_nums_reverse(n - 1)  
+
+num = int(input("Enter a number: "))
+print("Numbers from", num, "down to 1:")
+print_nums_reverse(num)
+'''
+#5.Recursive function to find power (xⁿ).
+'''
+def power(x,n):
+    if n==0:
+        return 1
+    else:
+        return x*power(x,n-1)
+
+base =int(input("enter the base(x): "))
+expo =int(input("enter the exponent(n): "))
+
+result =power(base,expo)
+print(base,"^",expo,"=",result)
+'''
+#6.Recursive function to find GCD.
+'''
+def gcd(a,b):
+    if b==0:
+        return a
+    else:
+        return gcd(b,a%b)
+
+x=int(input("enter first number: "))
+y=int(input("enter second number:"))
+
+print("GCD of ",x,"and",y,"is",gcd(x,y))
+'''
+
+#7.Recursive function to find LCM.
+'''
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+
+def lcm(a, b):
+    return (a * b) // gcd(a, b)
+
+x = int(input("Enter first number: "))
+y = int(input("Enter second number: "))
+
+print("LCM of", x, "and", y, "is:", lcm(x, y))
+'''
+#8.Recursive function to calculate sum of digits.
+'''
+def sod(n):
+    if n==0:
+        return 0
+    else:
+        return(n%10)+sod(n//10)
+
+num=int(input("enter the number:"))
+result = sod(num)
+
+print("sum of digits of ",num,"=",result)
+'''
+#9.Recursive function to reverse string.
+'''
+def reverse_string(s):
+    if s == "": 
+        return s
+    else:
+        return reverse_string(s[1:]) + s[0] 
+
+
+text = str(input("Enter a string: "))
+print("Original string:", text)
+print("Reversed string:", reverse_string(text))
+
+'''
+#10.Recursive function to reverse number.
+'''
+def reverse_number(n, rev=0):
+    if n == 0:   
+        return rev
+    else:
+        return reverse_number(n // 10, rev * 10 + n % 10)
+
+
+num = int(input("Enter a number: "))
+print("Original number:", num)
+print("Reversed number:", reverse_number(num))
+'''
+#11. Recursive function to reverse a number
+'''
+def reverse_number(n, rev=0):
+    if n == 0:  
+        return rev
+    else:
+        return reverse_number(n // 10, rev * 10 + n % 10)
+
+num = int(input("Enter a number: "))
+if is_palindrome_number(num):
+    print(num, "is a Palindrome Number")
+else:
+    print(num, "is Not a Palindrome Number")
+
+'''
+#12.Recursive function to check palindrome number.
+'''
+def is_palindrome_number(n, s=None):
+    if s is None:
+        s = str(n)
+    if len(s) <= 1:
+        return True
+    if s[0] != s[-1]:
+        return False
+
+    return is_palindrome_number(n, s[1:-1])
+
+num = int(input("Enter a number: "))
+if is_palindrome_number(num):
+    print(num, "is a Palindrome Number")
+else:
+    print(num, "is Not a Palindrome Number")
+
+'''
+
+#13.Recursive function to check palindrome string.
+'''
+def is_palindrome_string(s):
+    if len(s) <= 1:
+        return True
+    if s[0] != s[-1]:
+        return False
+    return is_palindrome_string(s[1:-1])
+
+text = input("Enter a string: ")
+if is_palindrome_string(text):
+    print(text, "is a Palindrome String")
+else:
+    print(text, "is Not a Palindrome String")
+
+'''
+#14.Recursive function to find nth Fibonacci number
+'''
+def fibonacci(n):
+    if n <= 1:  
+        return n
+    else:        
+        return fibonacci(n-1) + fibonacci(n-2)
+def fibonacci_series(n):
+    for i in range(n):
+        print(fibonacci(i), end=" ")
+
+num = int(input("Enter number of terms: "))
+print("Fibonacci Series:")
+fibonacci_series(num)
+
+'''
+#15.Recursive function to count digits in number.
+'''
+def count_digits(n):
+    # Base case: single digit number
+    if n < 10:
+        return 1
+    else:
+        # Recursive case: remove last digit and add 1
+        return 1 + count_digits(n // 10)
+
+# Example usage
+num = int(input("Enter a number: "))
+print("Number of digits:", count_digits(num))
+'''
+#16.Recursive function to find maximum element in list
+'''
+def find_max(lst, n=None):
+    if n is None:
+        n = len(lst) - 1
+    
+    if n == 0:
+        return lst[0]
+    
+    return max(lst[n], find_max(lst, n-1))
+
+numbers = [12, 45, 7, 89, 23, 56]
+print("Maximum element:", find_max(numbers))
+'''
+#17.Recursive function to find minimum element in list
+'''
+def find_min(lst, n=None):
+    if n is None:
+        n = len(lst) - 1
+    
+    if n == 0:
+        return lst[0]
+    
+    return min(lst[n], find_min(lst, n-1))
+
+numbers = [12, 45, 7, 89, 23, 56]
+print("Minimum element:", find_min(numbers))
+'''
+#18.Recursive function to remove all spaces in a string
+'''
+def remove_spaces(s):
+    if s == "":
+        return ""
+    if s[0] == " ":
+        return remove_spaces(s[1:])
+
+    return s[0] + remove_spaces(s[1:])
+
+text = "Hello World Program in Python"
+print("Original String:", text)
+print("String without spaces:", remove_spaces(text))
+
+'''
+#19.Recursive function to count vowels in a string.
+'''
+def count_vowels(s):
+    vowels = "aeiouAEIOU"
+    
+    if s == "":
+        return 0
+    
+    if s[0] in vowels:
+        return 1 + count_vowels(s[1:])
+    else:
+        return count_vowels(s[1:])
+
+text = "Recursion is powerful"
+print("Number of vowels:", count_vowels(text))
+
+'''
+#20.Recursive function to check prime number
+'''
+def is_prime(n, i=2):
+    if n <= 1:
+        return False
+    if i * i > n:   
+        return True
+    if n % i == 0:  
+        return False
+    
+    return is_prime(n, i+1)
+
+num = int(input("Enter a number: "))
+if is_prime(num):
+    print(num, "is a Prime Number")
+else:
+    print(num, "is Not a Prime Number")
+
+'''
+#21.Recursive function to calculate sum of list elements.
+'''
+def sum_list(lst, n=None):
+    if n is None:
+        n = len(lst) - 1
+    
+    if n == 0:
+        return lst[0]
+    
+   
+    return lst[n] + sum_list(lst, n-1)
+
+numbers = [10, 20, 30, 40, 50]
+print("Sum of list elements:", sum_list(numbers))
+'''

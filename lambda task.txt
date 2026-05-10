@@ -1,0 +1,164 @@
+#1.Lambda to find square of a number.
+'''
+square = lambda x:(x*x)
+x=int(input("Enter the number:"))
+print(square(x))
+'''
+#2.Lambda to check even or odd.
+'''
+check=lambda a:"even" if a%2==0 else "odd"
+a=int(input("enter the number: "))
+print(check(a))
+'''
+#3.Lambda to find maximum of two numbers.
+'''
+max1=lambda x,y:x if x>y else y
+x=int(input("enter the number: "))
+y=int(input("enter the number: "))
+print(max1(x,y))
+'''
+#4.Lambda to calculate cube.
+'''
+square = lambda x:(x*x*x)
+x=int(input("Enter the number:"))
+print(square(x))
+'''
+
+#5.Lambda to check positive or negative.
+'''
+check = lambda a:"positve" if a>0 else "negative"
+a=int(input("enter the number: "))
+print(check(a))
+'''
+
+#6.Lambda to add two numbers.
+'''
+add = lambda x,y:x+y
+x=int(input("enter the number: "))
+y=int(input("enter the number: "))
+print(add(x,y))
+'''
+#7.Lambda to sort list of tuples by second value.
+'''
+dt=[(9,9),(8,8),(7,7),(6,6),(5,5)]
+slist=sorted(dt,key=lambda x:x[1])
+
+print("org",dt)
+print("sorted_listed:",slist)
+'''
+#8.Lambda with filter() to get even numbers.
+'''
+c = [2,4,4,7,6,8,10]
+even = filter(lambda x: x % 2 == 0,c)
+print(list(even))
+'''
+#9.Lambda with filter() to get vowels from string.
+'''
+text=str(input("enter the word: "))
+
+a=filter(lambda ch: ch.lower() in "aeiou",text)
+
+print(list(a))
+'''
+#10.Lambda with map() to square list elements.
+'''
+a=[1,2,3,4,5,6]
+sq=map(lambda x:x*x,a)
+print(list(sq))
+'''
+#11.Lambda with map() to convert lowercase to uppercase.
+'''
+a="soundhar"
+
+u_c=map(lambda ch:ch.upper(),a)
+print(list(u_c))
+'''
+#12.Lambda with reduce() to find sum of list.
+'''
+from functools import reduce
+num=[10,23,27,50,60]
+total=reduce(lambda x,y:x+y,num)
+print("list:",num)
+print("SUM:",total)
+'''
+#13.Lambda with reduce() to find product of list.
+'''
+from functools import reduce
+num=[2,3,7,5,6]
+total=reduce(lambda x,y:x*y,num)
+print("list:",num)
+print("product:",total)
+'''
+#14.Lambda to check string length > 5
+'''
+a="soundhar"
+slen =lambda x:len(x)
+print("str:",a)
+print("lenght os string:",slen(a))
+'''
+#15.Lambda to find minimum in list.
+'''
+a=[1,2,3,3,1,5]
+min1=lambda x:min(x)
+print("org list:",a)
+print("list of minimum value:",min1(a))
+
+min1 =lambda x,y: x if x<y else y
+x=int(input("enter the number:"))
+y=int(input("enter the number:"))
+print("minimum value:",min(x,y))
+'''
+#16.Lambda to sort dictionary by values.
+'''
+dt={"a":6,"b":7,"c":8,"d":4}
+slist=dict(sorted(dt.items(),key=lambda items:items[1]))
+
+print("org",dt)
+print("sorted_listed:",slist)
+'''
+#17.Lambda to calculate simple interest.
+'''
+sim_int=lambda p,r,t:(p*r*t)/100
+
+p=int(input("enter the principal:"))
+r=int(input("enter the rate of interest:"))
+t=int(input("enter the time per year:"))
+SI=sim_int(p,r,t)
+print("========cal of simple interest=======")
+print("the principalof amount: ",p)
+print("the rate of interest: ",r)
+print("the times per years: ",t)
+print("======== simple interest =======")
+print("simple interest: ",SI)
+'''
+#18.Lambda to reverse a string.
+'''
+reverstr=lambda s:s[::-1]
+
+text = str(input("enter the words:"))
+rev= reverstr(text)
+
+print("Org string: ",text)
+print("rev string: ",rev)
+'''
+#19.Lambda to check palindrome string.
+'''
+words=lambda s: "yes"if s== s[::-1] else "not"
+
+text=str(input("enter the words: "))
+pali=words(text)
+
+print("org words: ",text)
+print("palindrome words: ",pali)
+
+'''
+#20.Lambda to find greatest of 3 numbers.
+'''
+fg3=lambda a,b,c:a if(a>=b and a>=c) else (b if b>=c else c)
+
+x=int(input("enter the number:"))
+y=int(input("enter the number:"))
+z=int(input("enter the number:"))
+
+print("grearest number is :",fg3(x,y,z))
+'''
